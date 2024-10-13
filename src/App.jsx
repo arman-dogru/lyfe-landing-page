@@ -1,14 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
+import "animate.css/animate.compat.css";
 import './App.css'
-import Home from './pages/Home'
 import New from './pages/New'
 
 function App() {
   return (
     <>
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/new" element={<New />} />
+        <Route index element={<New />} />
       </Routes>
     </>
   )

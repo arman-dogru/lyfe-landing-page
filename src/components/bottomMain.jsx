@@ -1,53 +1,82 @@
-import React from 'react';
-import DownloadStore from '../assets/donwloadstore.png';
+import QR_code from "../assets/QR_code.png";
+import { FaFacebook, FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
+import { FaApple } from "react-icons/fa";
 
 const BottomMain = () => {
   return (
-    <div className="relative h-screen flex flex-col justify-between">
-      {/* AI Generated Text with a shadow */}
-      <div className="text-center my-auto">
-        <div className="relative inline-block">
-          <div className="absolute inset-0 bg-black opacity-30 rounded-full w-80 h-80 mx-auto blur-xl"></div>
-          <h1 className="relative text-4xl sm:text-5xl md:text-6xl font-bold text-black z-10">
-            JOIN US
-          </h1>
-        </div>
+    <div className="relative flex flex-col justify-between items-center min-h-fit lg:px-16 py-10 md:pb-10 bg-gradient-to-r from-[#f0f0f5] to-[#d9e4f5]">
+      {/* Header Text */}
+      <div className="text-center mt-10 px-4">
+        <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-black">
+          Join our waitlist and step into your next lyfe <br /> adventure.
+        </h1>
       </div>
 
-      {/* Button Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
-        <button className="border border-black  py-3 px-6 text-lg font-medium">
-          Let's start making music on May 5.
-        </button>
-        <button className="border border-black flex items-center py-3 px-6 text-lg font-medium ">
-          <svg className="h-8 w-8 text-black mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-16 lg:space-x-24 mt-16 px-4">
+        {/* QR Code and Label */}
+        <div className="flex flex-col items-center text-center space-y-6">
+          <img
+            src={QR_code}
+            alt="QR Code"
+            className="w-60 h-60 md:w-72 md:h-72 lg:w-72 lg:h-72"
+          />
+        </div>
+
+        {/* Middle Text */}
+        <p className="text-center text-lg md:text-xl lg:text-2xl">
+          SCAN QR <br /> OR DROP YOUR SCHOOL
+          <br /> EMAIL.
+        </p>
+
+        {/* Join Waitlist Button */}
+        <button className="relative border border-black rounded-full px-32 py-4 text-xl flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300">
+          <span>Join Waitlist</span>
+          <svg
+            className="w-8 h-8 absolute right-0"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            viewBox="0 0 35 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
-          <img src={DownloadStore} alt="Download Store" className="h-8"/>
         </button>
       </div>
 
-      {/* Footer - Social Icons and Scanner */}
-      <div className="flex items-center justify-between px-8 pb-4">
-        {/* Social Icons */}
-        <div className="flex space-x-4">
-          <span className="text-black hover:text-gray-600 cursor-pointer">
-            {/* Facebook Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512" className="h-5 w-5">
-              <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
-            </svg>
-          </span>
-          <span className="text-black hover:text-gray-600 cursor-pointer">
-            {/* Instagram Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" className="h-5 w-5">
-              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z" />
-            </svg>
-          </span>
-          {/* Add more social icons here */}
+      {/* Footer - Contact Information and Social Icons */}
+      <div className="w-full flex flex-col  xl:flex-row justify-between items-center text-sm md:text-lg lg:text-2xl text-gray-800 px-8 mt-10 space-y-6 md:space-y-0">
+        <div className="flex flex-col gap-10 md:-mt-3">
+          <div className="flex flex-col items-center xl:items-start text-center md:text-left w-full md:w-auto">
+            <p className="mb-1">PHONE</p>
+            <p className="font-medium">(123) 456-7890</p>
+          </div>
+          <div className="flex items-center justify-center space-x-2 bg-gray-200 px-4 py-2 rounded-md w-full md:w-auto">
+            <FaApple size={24} className="text-black" />
+            <p className="text-sm md:text-base font-medium text-black text-center xl:text-left">
+              Join waitlist for
+              <br /> IOS APP.
+            </p>
+          </div>
         </div>
-        {/* Scanner Label */}
-        <div className="text-blue-500 font-semibold text-lg">
-          Scanner
+
+        <div className="flex flex-col items-center pt-16 xl:pt-0 xl:items-start text-center xl:text-left w-full md:w-auto">
+          <p className="mb-1">EMAIL</p>
+          <p className="font-medium">hello@reallygreatsite.com</p>
+        </div>
+        <div className="flex flex-col items-center xl:items-start w-full md:w-auto md:pt-16">
+          <p>SOCIALS</p>
+          <section className="flex space-x-4">
+            <FaFacebook size={24} />
+            <FaInstagram size={24} />
+            <FaTiktok size={24} />
+            <FaXTwitter size={24} />
+          </section>
+        </div>
+        <div className="flex flex-col items-center xl:items-start text-center md:text-start w-full md:w-auto md:pt-28">
+          <p className="mb-1 ">LOCATION</p>
+          <p className="font-medium">hello@reallygreatsite.com</p>
         </div>
       </div>
     </div>

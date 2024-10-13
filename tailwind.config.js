@@ -7,18 +7,18 @@ export default {
         customElectric: "rgb(10, 90, 194)",
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        circular: ['Circular Std', 'sans-serif'],
-        gilroy: ['Gilroy', 'sans-serif'],
+        sans: ["Poppins", "Gilroy", "Circular Std", "sans-serif"],
+        maharlika: ["Maharlika", "sans-serif"],
+        hkgrotesk: ["HkGrotesk", "sans-serif"],
       },
       keyframes: {
         scroll: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-80%)" },
         },
       },
       animation: {
-        scroll: 'scroll 15s linear infinite',
+        scroll: "scroll 50s linear infinite",
       },
     },
   },
