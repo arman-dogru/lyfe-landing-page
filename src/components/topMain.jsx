@@ -65,37 +65,40 @@ const topMain = () => {
         </div>
 
         <div className="relative mx-auto min-h-min">
-          {/* Adjusted Image Positions */}
-          <ScrollAnimation animateIn="backInUp">
-            <div className="block md:relative mt-4 md:mt-0 -left-28 top-40 z-0 w-96 md:w-60 h-74">
-              <img
-                src={Image1}
-                alt="Image 1"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </ScrollAnimation>
+  {/* Image1 with 2175x2900 aspect ratio, smaller with rounded edges */}
+  <ScrollAnimation animateIn="backInUp">
+    <div className="block md:relative mt-4 md:mt-0 -left-28 top-40 z-0 w-60 rounded-full overflow-hidden"> {/* Reduced size and added rounded edges */}
+      <img
+        src={Image1}
+        alt="Image 1"
+        className="object-cover w-full h-full"
+      />
+    </div>
+  </ScrollAnimation>
 
-          <ScrollAnimation animateIn="backInRight">
-            <div className="block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-96 md:w-64 h-96 md:h-64">
-              <img
-                src={Image2}
-                alt="Image 2"
-                className="object-fill w-full h-full"
-              />
-            </div>
-          </ScrollAnimation>
+  {/* Image2 with 4:6 aspect ratio, smaller with rounded edges */}
+  <ScrollAnimation animateIn="backInRight">
+    <div className="block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-60 rounded-full overflow-hidden"> {/* Reduced size and added rounded edges */}
+      <img
+        src={Image2}
+        alt="Image 2"
+        className="object-fill w-full h-full"
+      />
+    </div>
+  </ScrollAnimation>
 
-          <ScrollAnimation animateIn="backInUp" offset={20}>
-            <div className="block md:relative mt-4 md:mt-0 -left-24 top-0 z-10 w-96 md:w-72 h-72">
-              <img
-                src={Image3}
-                alt="Image 3"
-                className="object-fill w-full h-full"
-              />
-            </div>
-          </ScrollAnimation>
-        </div>
+  {/* Image3 with 2591x3888 aspect ratio, smaller with rounded edges */}
+  <ScrollAnimation animateIn="backInUp" offset={20}>
+    <div className="block md:relative mt-4 md:mt-0 -left-24 -top-40 z-10 w-60 rounded-full overflow-hidden"> {/* Reduced size and added rounded edges */}
+      <img
+        src={Image3}
+        alt="Image 3"
+        className="object-fill w-full h-full"
+      />
+    </div>
+  </ScrollAnimation>
+</div>
+
       </div>
     </div>
   );
