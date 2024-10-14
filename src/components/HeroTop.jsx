@@ -8,9 +8,9 @@ const HeroTop = () => {
   const [musicBtn, setMusicBtn] = useState(true);
 
   const scrollToNextComponent = () => {
-    const nextComponent = document.getElementById("top-main");
+    const nextComponent = document.getElementById("banner");
     if (nextComponent) {
-      nextComponent.scrollIntoView({ behavior: "smooth" });
+      nextComponent.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -78,28 +78,6 @@ const HeroTop = () => {
         {/* Decorative Arrow at Bottom */}
         <div className="absolute right-0 left-0 bottom-8 flex justify-center">
           <FaAnglesDown size={50} onClick={scrollToNextComponent} />
-        </div>
-      </div>
-
-      {/* Scrolling Text at Bottom */}
-      <div className="bottom-4 w-full md:w-full overflow-hidden whitespace-nowrap py-10 border-l-4 border-black">
-        <div className="animate-scroll inline-block">
-          {[...Array(2)].map((_, i) => (
-            <span key={i} className="mx-4 text-5xl md:text-8xl text-black">
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-            </span>
-          ))}
         </div>
       </div>
     </div>
