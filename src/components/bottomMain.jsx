@@ -4,11 +4,11 @@ import { FaApple } from "react-icons/fa";
 
 const BottomMain = () => {
   return (
-    <div className="relative flex flex-col justify-between items-center min-h-fit lg:px-16 py-10 md:pb-10 bg-gradient-to-r from-[#f0f0f5] to-[#d9e4f5]">
+    <div className="relative flex flex-col justify-between items-center min-h-fit lg:px-16 py-10 md:pb-10">
       {/* Header Text */}
-      <div className="text-center mt-10 px-4">
-        <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-black">
-          Join our waitlist and step into your next lyfe <br /> adventure.
+      <div className="text-left mt-10 px-4">
+        <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-8xl text-black">
+          Join our waitlist and step into your<br /> next lyfe adventure.
         </h1>
       </div>
 
@@ -24,7 +24,7 @@ const BottomMain = () => {
 
         {/* Middle Text */}
         <p className="text-center text-lg md:text-xl lg:text-2xl">
-          SCAN QR <br /> OR DROP YOUR SCHOOL
+          SCAN QR <br /> OR DROP YOUR
           <br /> EMAIL.
         </p>
 
