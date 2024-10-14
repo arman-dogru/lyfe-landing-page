@@ -51,7 +51,9 @@ const HeroTop = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-black mb-4 font-maharlika">
             LYFE AWAITS.
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-5xl text-gray-800 mt-12 mb-12 md:w-3/5 font-hkgrotesk">
+
+          {/* Responsive Text Block */}
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-gray-800 mt-12 mb-12 max-w-[90%] md:max-w-[70%] lg:max-w-[60%] font-hkgrotesk">
             An exclusive space to bring uOttawa, Carleton, and Algonquin
             students closer.
           </p>
