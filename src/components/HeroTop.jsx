@@ -48,7 +48,7 @@ const HeroTop = () => {
       >
         <div className="flex flex-col items-center">
           {/* Hero Text */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-black mb-4 font-maharlika">
+          <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl text-black mb-4 font-maharlika">
             LYFE AWAITS.
           </h1>
 
@@ -61,7 +61,7 @@ const HeroTop = () => {
 
         {/* Join Waitlist Button */}
         <div className="flex mt-16">
-          <button className="relative border border-black rounded-full px-32 py-4 text-xl flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300">
+          <button className="relative border border-black rounded-full px-32 py-4 text-base flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300 md:text-xl">
             <span>Get Early Access</span>
             <svg
               className="w-8 h-8 absolute right-4"

@@ -1,10 +1,35 @@
 .fade {
-    transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  #Image-Flexing {
+    display: flex;
+    flex-direction: row;      /* Ensure images are in a row */
+    justify-content: center;  /* Center images within the container */
+    align-items: center;
+    gap: 1rem;                /* Add some space between the images */
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;          /* Allow wrapping if necessary */
   }
-  .opacity-0 {
-    opacity: 0;
+
+  /* Ensure images are responsive */
+  #Image-Flexing div {
+    width: 30%;               /* Make images take up 30% of the container width */
+    min-width: 100px;         /* Set a minimum width to prevent images from getting too small */
   }
-  .opacity-100 {
-    opacity: 1;
+
+  #Image-Flexing img {
+    width: 100%;              /* Ensure images scale to fill their container */
+    height: auto;             /* Maintain aspect ratio */
   }
-  
+}

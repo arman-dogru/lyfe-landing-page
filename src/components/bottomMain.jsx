@@ -14,7 +14,7 @@ const BottomMain = () => {
 
       <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-16 lg:space-x-48 mt-16 px-4">
         {/* Join Waitlist Button */}
-        <button className="relative border border-black rounded-full px-32 py-4 text-base flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300">
+        <button className="relative border border-black rounded-full px-32 py-4 text-xs flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300 md:text-xl">
           <span>Get Early Access</span>
           <svg
             className="w-9 h-8 absolute right-0"
