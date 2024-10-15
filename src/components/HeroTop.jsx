@@ -19,7 +19,7 @@ const HeroTop = () => {
       <div className="w-full flex justify-between items-center md:px-20">
         {/* Music Toggle Button */}
         <div
-          className="flex items-center rounded-full bg-gray-200 hover:bg-blue-700 hover:text-white p-2"
+          className="flex items-center rounded-full ml-2 bg-gray-200 hover:bg-blue-700 hover:text-white p-2"
           style={{ fontSize: 70 }}
           onClick={() => setMusicBtn(!musicBtn)}
         >
@@ -33,7 +33,7 @@ const HeroTop = () => {
         {/* Decorative Star at Top Right */}
         <div className="flex items-center justify-end w-full">
           <div
-            className="absolute right-8 top-5"
+            className="absolute right-8"
             style={{ fontSize: "70px" }}
           >
             ✦
@@ -62,7 +62,7 @@ const HeroTop = () => {
         {/* Join Waitlist Button */}
         <div className="flex mt-16">
           <button className="relative border border-black rounded-full px-32 py-4 text-xl flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300">
-            <span>Join Waitlist</span>
+            <span>Get Early Access</span>
             <svg
               className="w-8 h-8 absolute right-4"
               fill="none"

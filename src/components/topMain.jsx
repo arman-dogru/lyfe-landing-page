@@ -31,76 +31,75 @@ const topMain = () => {
 
   return (
     <div id="top-main" className="">
-      {/* Scrolling Text at Bottom */}
-      <div className="bottom-4 w-full md:w-full overflow-hidden whitespace-nowrap py-24">
-        <div id="banner" className="animate-scroll inline-block">
-          {[...Array(2)].map((_, i) => (
-            <span key={i} className="mx-4 text-5xl md:text-8xl text-black">
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-              <b>✦ LYFE ✦</b>
-              <span className="text-7xl"> Beyond The Screen</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="grid sm:grid-cols-1 lg:grid-cols-2 py-0 min-h-min bottom-40 relative">
-        <div className="flex flex-row justify-center items-center">
-          <h1
-            className={`w-1/2 text-4xl sm:text-center  md:text-5xl md:text-center lg:text-left lg:text-7xl text-left transition-opacity duration-1000 bottom-20 ${
-              fadeIn ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {texts[currentText]}
-          </h1>
-        </div>
-
-        <div className="relative mx-auto min-h-min">
-  {/* Image1 with 2175x2900 aspect ratio, smaller with rounded edges */}
-  <ScrollAnimation animateIn="backInUp">
-    <div className="block md:relative mt-4 md:mt-0 -left-28 top-40 z-0 w-60 rounded-full overflow-hidden"> {/* Reduced size and added rounded edges */}
-      <img
-        src={Image1}
-        alt="Image 1"
-        className="object-cover w-full h-full"
-      />
-    </div>
-  </ScrollAnimation>
-
-  {/* Image2 with 4:6 aspect ratio, smaller with rounded edges */}
-  <ScrollAnimation animateIn="backInRight">
-    <div className="block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-60 rounded-full overflow-hidden"> {/* Reduced size and added rounded edges */}
-      <img
-        src={Image2}
-        alt="Image 2"
-        className="object-fill w-full h-full"
-      />
-    </div>
-  </ScrollAnimation>
-
-  {/* Image3 with 2591x3888 aspect ratio, smaller with rounded edges */}
-  <ScrollAnimation animateIn="backInUp" offset={20}>
-    <div className="block md:relative mt-4 md:mt-0 -left-24 -top-40 z-10 w-60 rounded-full overflow-hidden"> {/* Reduced size and added rounded edges */}
-      <img
-        src={Image3}
-        alt="Image 3"
-        className="object-fill w-full h-full"
-      />
-    </div>
-  </ScrollAnimation>
-</div>
-
+    {/* Scrolling Text at Bottom */}
+    <div className="bottom-4 w-full md:w-full overflow-hidden whitespace-nowrap py-24">
+      <div id="banner" className="animate-scroll inline-block">
+        {[...Array(2)].map((_, i) => (
+          <span key={i} className="mx-4 text-5xl md:text-8xl text-black">
+            <b>✦ LYFE ✦</b>
+            <span className="text-7xl"> Beyond The Screen</span>
+            <b>✦ LYFE ✦</b>
+            <span className="text-7xl"> Beyond The Screen</span>
+            <b>✦ LYFE ✦</b>
+            <span className="text-7xl"> Beyond The Screen</span>
+            <b>✦ LYFE ✦</b>
+            <span className="text-7xl"> Beyond The Screen</span>
+            <b>✦ LYFE ✦</b>
+            <span className="text-7xl"> Beyond The Screen</span>
+            <b>✦ LYFE ✦</b>
+            <span className="text-7xl"> Beyond The Screen</span>
+          </span>
+        ))}
       </div>
     </div>
+
+    <div className="grid sm:grid-cols-1 lg:grid-cols-2 py-0 min-h-min relative">
+      <div className="flex flex-row justify-center items-center sm:px-4 md:px-0 mb-8 md:mb-0">
+        <h1
+          className={`w-1/2 text-4xl sm:text-center md:text-5xl md:text-center lg:text-left lg:text-7xl transition-opacity duration-1000 ${
+            fadeIn ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {texts[currentText]}
+        </h1>
+      </div>
+
+      <div className="relative mx-auto min-h-min">
+        {/* Image1 with adjusted size */}
+        <ScrollAnimation animateIn="backInUp">
+          <div className="block md:relative mt-4 md:mt-0 -left-20 top-32 sm:top-24 z-0 w-52 sm:w-60 rounded-full overflow-hidden">
+            <img
+              src={Image1}
+              alt="Image 1"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </ScrollAnimation>
+
+        {/* Image2 with adjusted size */}
+        <ScrollAnimation animateIn="backInRight">
+          <div className="block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-52 sm:w-60 rounded-full overflow-hidden">
+            <img
+              src={Image2}
+              alt="Image 2"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </ScrollAnimation>
+
+        {/* Image3 with adjusted size */}
+        <ScrollAnimation animateIn="backInUp" offset={20}>
+          <div className="block md:relative mt-4 md:mt-0 -left-16 sm:-left-24 sm:-top-40 top-24 z-10 w-52 sm:w-60 rounded-full overflow-hidden">
+            <img
+              src={Image3}
+              alt="Image 3"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </ScrollAnimation>
+      </div>
+    </div>
+  </div>
   );
 };
 

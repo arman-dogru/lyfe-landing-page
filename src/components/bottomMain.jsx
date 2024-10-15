@@ -8,31 +8,16 @@ const BottomMain = () => {
       {/* Header Text */}
       <div className="text-left mt-10 px-4">
         <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-8xl text-black">
-          Join our waitlist and step into your<br /> next lyfe adventure.
+        Sign up for early access and step into the lyfe adventure.
         </h1>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-16 lg:space-x-24 mt-16 px-4">
-        {/* QR Code and Label */}
-        <div className="flex flex-col items-center text-center space-y-6">
-          <img
-            src={QR_code}
-            alt="QR Code"
-            className="w-60 h-60 md:w-72 md:h-72 lg:w-72 lg:h-72"
-          />
-        </div>
-
-        {/* Middle Text */}
-        <p className="text-center text-lg md:text-xl lg:text-2xl">
-          SCAN QR <br /> OR DROP YOUR
-          <br /> EMAIL.
-        </p>
-
+      <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-16 lg:space-x-48 mt-16 px-4">
         {/* Join Waitlist Button */}
-        <button className="relative border border-black rounded-full px-32 py-4 text-xl flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300">
-          <span>Join Waitlist</span>
+        <button className="relative border border-black rounded-full px-32 py-4 text-base flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300">
+          <span>Get Early Access</span>
           <svg
-            className="w-8 h-8 absolute right-0"
+            className="w-9 h-8 absolute right-0"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -43,6 +28,22 @@ const BottomMain = () => {
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </button>
+
+
+        {/* Middle Text */}
+        <p className="text-center text-lg md:text-xl lg:text-2xl">
+          SCAN QR <br /> OR DROP YOUR EMAIL.
+        </p>
+
+        {/* QR Code and Label */}
+        <div className="flex flex-col items-center text-center space-y-6">
+          <img
+            src={QR_code}
+            alt="QR Code"
+            className="w-60 h-60 md:w-72 md:h-72 lg:w-72 lg:h-72"
+          />
+        </div>
+
       </div>
 
       {/* Footer - Contact Information and Social Icons */}
@@ -61,7 +62,7 @@ const BottomMain = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center pt-16 xl:pt-0 xl:items-start text-center xl:text-left w-full md:w-auto">
+        <div className="flex flex-col items-center pt-0 xl:pt-0 xl:items-start text-center xl:text-left w-full md:w-auto">
           <p className="mb-1">EMAIL</p>
           <p className="font-medium">hello@reallygreatsite.com</p>
         </div>
