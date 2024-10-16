@@ -37,24 +37,26 @@ const topMain = () => {
         {[...Array(2)].map((_, i) => (
           <span key={i} className="mx-4 text-5xl md:text-8xl text-black">
             <b>✦ LYFE ✦</b>
-            <span className="text-7xl"> Beyond The Screen</span>
+            <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
             <b>✦ LYFE ✦</b>
-            <span className="text-7xl"> Beyond The Screen</span>
+            <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
             <b>✦ LYFE ✦</b>
-            <span className="text-7xl"> Beyond The Screen</span>
+            <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
             <b>✦ LYFE ✦</b>
-            <span className="text-7xl"> Beyond The Screen</span>
+            <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
             <b>✦ LYFE ✦</b>
-            <span className="text-7xl"> Beyond The Screen</span>
+            <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
             <b>✦ LYFE ✦</b>
-            <span className="text-7xl"> Beyond The Screen</span>
+            <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
+            <b>✦ LYFE ✦</b>
+            <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
           </span>
         ))}
       </div>
     </div>
 
-    <div className="grid sm:grid-cols-1 lg:grid-cols-2 py-0 min-h-min relative">
-      <div className="flex flex-row justify-center items-center sm:px-4 md:px-0 mb-8 md:mb-0">
+    <div className="grid sm:grid-cols-1 lg:grid-cols-2 py-0 min-h-min relative" id="AI-Text-Component">
+      <div className="flex flex-row justify-center items-center sm:px-4 md:px-0 mb-8 md:mb-0" id="Rotating-Text">
         <h1
           className={`w-1/2 text-4xl  sm:text-center md:text-5xl text-center md:text-center lg:text-left lg:text-7xl transition-opacity duration-1000 ${
             fadeIn ? "opacity-100" : "opacity-0"
