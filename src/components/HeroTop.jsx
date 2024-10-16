@@ -19,7 +19,7 @@ const HeroTop = () => {
       <div className="w-full flex justify-between items-center md:px-20">
         {/* Music Toggle Button */}
         <div
-          className="flex items-center rounded-full ml-2 bg-gray-200 hover:bg-blue-700 hover:text-white p-2"
+          className="flex items-center rounded-full bg-gray-200 hover:bg-blue-700 hover:text-white p-2"
           style={{ fontSize: 70 }}
           onClick={() => setMusicBtn(!musicBtn)}
         >
@@ -33,7 +33,7 @@ const HeroTop = () => {
         {/* Decorative Star at Top Right */}
         <div className="flex items-center justify-end w-full">
           <div
-            className="absolute right-8"
+            className="relative right-8"
             style={{ fontSize: "70px" }}
           >
             ✦

@@ -7,27 +7,27 @@ const BottomMain = () => {
     <div className="relative flex flex-col justify-between items-center min-h-fit lg:px-16 py-10 md:pb-10">
       {/* Header Text */}
       <div className="text-left mt-10 px-4">
-        <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-8xl text-black">
+        <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-7xl text-black">
         Sign up for early access and step into the lyfe adventure.
         </h1>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-16 lg:space-x-48 mt-16 px-4">
         {/* Join Waitlist Button */}
-        <button className="relative border border-black rounded-full px-32 py-4 text-xs flex items-center justify-between space-x-3 hover:bg-black hover:text-white transition-all duration-300 md:text-xl">
-          <span>Get Early Access</span>
-          <svg
-            className="w-9 h-8 absolute right-0"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 35 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
+        <button className="relative border border-black rounded-full px-8 py-3 text-base flex items-center justify-between space-x-2 hover:bg-black hover:text-white transition-all duration-300 md:text-xl whitespace-nowrap">
+        <span>Get Early Access</span>
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
 
 
         {/* Middle Text */}
