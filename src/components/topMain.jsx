@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import Image1 from "../assets/Image1.jpg";
 import Image2 from "../assets/Image2.jpg";
 import Image3 from "../assets/Image3.jpg";
-import Image4 from "../assets/Image4.jpg";
 import "../styles/topMain.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const topMain = () => {
+const TopMain = () => {
   const texts = [
     "Empowering artists around the globe",
     "Supporting independent creators",
@@ -30,67 +29,70 @@ const topMain = () => {
   }, []);
 
   return (
-    <div id="top-main" className="relative flex flex-col items-center text-center bg-white pt-5">
-  {/* Scrolling Text at Bottom */}
-  <div className="bottom-4 w-full md:w-full overflow-hidden whitespace-nowrap py-8">
-    <div id="banner" className="animate-scroll inline-block">
-      {[...Array(2)].map((_, i) => (
-        <span key={i} className="mx-4 text-5xl md:text-8xl text-black">
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-          <b>✦ LYFE ✦</b>
-          <span className="mx-4 text-5xl md:text-8xl"> BEYOND THE SCREEN </span>
-        </span>
-      ))}
-    </div>
-  </div>
+    <div
+      id="top-main"
+      className="relative flex flex-col items-center text-center bg-white pt-5"
+    >
+      {/* Scrolling Text at Bottom */}
+      <div className="w-full overflow-hidden whitespace-nowrap py-8">
+        <div id="banner" className="animate-scroll inline-block">
+          {[...Array(2)].map((_, i) => (
+            <span
+              key={i}
+              className="mx-4 text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-black"
+            >
+              {[...Array(10)].map((_, j) => (
+                <React.Fragment key={j}>
+                  <b>✦ LYFE ✦</b>
+                  <span className="mx-4"> BEYOND THE SCREEN </span>
+                </React.Fragment>
+              ))}
+            </span>
+          ))}
+        </div>
+      </div>
 
-  <div className="grid sm:grid-cols-1 lg:grid-cols-2 py-0 h-auto relative" id="AI-Text-Component">
-    <div className="flex flex-row justify-center items-center sm:px-4 md:px-0 mb-8 md:mb-0" id="Rotating-Text">
-      <h1
-        className={`w-1/2 text-4xl sm:text-center md:text-5xl text-center md:text-center lg:text-left lg:text-7xl transition-opacity duration-1000 ${
-          fadeIn ? "opacity-100" : "opacity-0"
-        }`}
+      {/* Main Content */}
+      <div
+        className="grid grid-cols-1 lg:grid-cols-2 items-center py-0 h-auto relative"
+        id="AI-Text-Component"
       >
-        {texts[currentText]}
-      </h1>
+        {/* Rotating Text */}
+        <div
+          className="flex justify-center items-center px-4 mb-8 lg:mb-0"
+          id="Rotating-Text"
+        >
+          <h1
+            className={`w-full lg:w-3/4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl transition-opacity duration-1000 ${
+              fadeIn ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {texts[currentText]}
+          </h1>
+        </div>
+
+        <div className="relative mx-auto h-auto" id="Image-Flexing">
+          <ScrollAnimation animateIn="backInUp">
+            <div className="block md:relative mt-4 md:mt-0 -left-20 top-32 sm:top-24 z-0 w-52 sm:w-60 rounded-full overflow-hidden">
+              <img src={Image1} alt="Image 1" className="object-cover w-full h-full" />
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animateIn="backInRight">
+            <div className="block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-52 sm:w-60 rounded-full overflow-hidden">
+              <img src={Image2} alt="Image 2" className="object-cover w-full h-full" />
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animateIn="backInUp" offset={20}>
+            <div className="block md:relative mt-4 md:mt-0 -left-16 sm:-left-24 sm:-top-40 top-24 z-10 w-52 sm:w-60 rounded-full overflow-hidden">
+              <img src={Image3} alt="Image 3" className="object-cover w-full h-full" />
+            </div>
+          </ScrollAnimation>
+        </div>
+      </div>
     </div>
-
-    <div className="relative mx-auto h-auto" id="Image-Flexing">
-      <ScrollAnimation animateIn="backInUp">
-        <div className="block md:relative mt-4 md:mt-0 -left-20 top-32 sm:top-24 z-0 w-52 sm:w-60 rounded-full overflow-hidden">
-          <img src={Image1} alt="Image 1" className="object-cover w-full h-full" />
-        </div>
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="backInRight">
-        <div className="block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-52 sm:w-60 rounded-full overflow-hidden">
-          <img src={Image2} alt="Image 2" className="object-cover w-full h-full" />
-        </div>
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="backInUp" offset={20}>
-        <div className="block md:relative mt-4 md:mt-0 -left-16 sm:-left-24 sm:-top-40 top-24 z-10 w-52 sm:w-60 rounded-full overflow-hidden">
-          <img src={Image3} alt="Image 3" className="object-cover w-full h-full" />
-        </div>
-      </ScrollAnimation>
-    </div>
-  </div>
-</div>
-
   );
 };
 
-export default topMain;
+export default TopMain;

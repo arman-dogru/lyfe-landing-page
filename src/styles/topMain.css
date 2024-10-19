@@ -19,17 +19,20 @@
     gap: 1rem;                /* Add some space between the images */
     width: 100%;
     height: auto;
-    flex-wrap: wrap;          /* Allow wrapping if necessary */
+    flex-wrap: nowrap;        /* Prevent wrapping to keep all images in one line */
   }
 
-  /* Ensure images are responsive */
+  /* Ensure images are of equal size */
   #Image-Flexing div {
-    width: 30%;               /* Make images take up 30% of the container width */
-    min-width: 100px;         /* Set a minimum width to prevent images from getting too small */
+    width: 30%;               /* Each image takes 30% of the container width */
+    min-width: 100px;         /* Set a minimum width for images */
+    max-width: 100px;         /* Set a maximum width for images */
   }
 
   #Image-Flexing img {
-    width: 100%;              /* Ensure images scale to fill their container */
+    width: 100%;              /* Make images responsive and occupy their container */
     height: auto;             /* Maintain aspect ratio */
+    object-fit: cover;        /* Ensure the images are cropped neatly */
+    border-radius: 50%;       /* Keep the circular shape */
   }
 }
