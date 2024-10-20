@@ -87,14 +87,14 @@ const MiddleMain = () => {
           </div>
 
           {/* Mobile View - Swipeable Carousel layout */}
-          <div className="relative w-full md:hidden overflow-x-scroll flex space-x-4 px-6 snap-x snap-mandatory scrollbar-hide">
+          <div className="relative w-80 md:hidden overflow-x-scroll flex space-x-4 px-6 snap-x snap-mandatory scrollbar-hide">
             {features.map((feature, index) => (
               <div
                 key={index}
                 className={`relative min-w-[75%] h-96 rounded-2xl overflow-hidden shadow-lg snap-center ${feature.bgColor}`}
                 style={{
-                  marginLeft: index === 0 ? '15px' : '',
-                  marginRight: index === features.length - 1 ? '15px' : '',
+                  marginLeft: index === 0 ? '1px' : '',
+                  marginRight: index === features.length - 1 ? '1px' : '',
                 }}
               >
                 {/* Background Image */}
@@ -108,9 +108,11 @@ const MiddleMain = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
                 {/* Text Overlay */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10">
-                  <h2 className="text-lg font-semibold">{feature.title}</h2>
-                  <p className="text-xl font-medium">{feature.description}</p>
+                <div className="absolute inset-0 p-6 flex flex-col justify-between text-white z-10">
+                  <div className="space-y-2">
+                    <h2 className="text-sm font-medium">{feature.title}</h2>
+                    <p className="text-md font-medium">{feature.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
