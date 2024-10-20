@@ -46,9 +46,9 @@ const BottomMain = () => {
       </div>
 
       {/* Footer - Contact Information and Social Icons */}
-      <div className="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 px-4 sm:px-8 mt-10 space-y-8 lg:space-y-0">
+      <div className="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start text-sm sm:text-base md:text-lg lg:text-2xl text-gray-800 px-4 sm:px-8 mt-10 space-y-8 lg:space-y-0">
         <div className="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left">
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center lg:items-start lg:pb-10">
             <p className="mb-1 font-semibold">PHONE</p>
             <p className="font-medium">(123) 456-7890</p>
           </div>
@@ -60,12 +60,12 @@ const BottomMain = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:pt-9 w-full md:w-auto">
           <p className="mb-1 font-semibold">EMAIL</p>
           <p className="font-medium">hello@reallygreatsite.com</p>
         </div>
 
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:pt-20 w-full md:w-auto">
           <p className="mb-1 font-semibold">SOCIALS</p>
           <div className="flex space-x-4 mt-2">
             <FaFacebook size={24} />
@@ -75,7 +75,7 @@ const BottomMain = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:pt-28">
           <p className="mb-1 font-semibold">LOCATION</p>
           <p className="font-medium">1234 Street Name<br />City, State, ZIP</p>
         </div>

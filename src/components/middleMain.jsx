@@ -49,7 +49,7 @@ const MiddleMain = () => {
   return (
     <div className="flex flex-col items-center w-full">
       {/* Wrapper Container for Title and Cards */}
-      <div className="w-full max-w-screen-xl px-4">
+      <div className="w-full max-w-screen-xl lg:px-0 md:px-4">
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-10 text-left">
           Our Features
@@ -61,7 +61,7 @@ const MiddleMain = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`relative w-full h-96 rounded-2xl overflow-hidden shadow-lg ${feature.bgColor} hover:scale-105 transition-transform duration-300`}
+                className={`relative md:w-full md:h-full lg:w-80 lg:h-[35rem] rounded-2xl overflow-hidden shadow-lg ${feature.bgColor} hover:scale-105 transition-transform duration-300`}
               >
                 {/* Background Image */}
                 <img
@@ -74,9 +74,11 @@ const MiddleMain = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
                 {/* Text Overlay */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10">
-                  <h2 className="text-lg font-semibold">{feature.title}</h2>
-                  <p className="text-xl font-medium">{feature.description}</p>
+                <div className="absolute inset-0 p-6 flex flex-col justify-between text-white z-10">
+                  <div className="space-y-2">
+                    <h2 className="text-sm font-medium">{feature.title}</h2>
+                    <p className="text-2xl font-medium">{feature.description}</p>
+                    </div>
                 </div>
               </div>
             ))}

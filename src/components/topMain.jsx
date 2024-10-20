@@ -41,7 +41,7 @@ const TopMain = () => {
               key={i}
               className="mx-4 text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-black"
             >
-              {[...Array(10)].map((_, j) => (
+              {[...Array(8)].map((_, j) => (
                 <React.Fragment key={j}>
                   <b>✦ LYFE ✦</b>
                   <span className="mx-4"> BEYOND THE SCREEN </span>
