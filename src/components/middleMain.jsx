@@ -5,6 +5,7 @@ import Event2 from "../assets/event-2.jpg";
 import Event3 from "../assets/event-3.jpg";
 import Event4 from "../assets/event-4.jpg";
 import Arman from "../assets/Arman.jpg";
+import "../styles/middleMain.css";
 
 const features = [
   {
@@ -51,9 +52,10 @@ const MiddleMain = () => {
       {/* Wrapper Container for Title and Cards */}
       <div className="w-full max-w-screen-xl lg:px-0 md:px-4">
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-10 text-left">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-10 text-center md:text-left">
           Our Features
         </h1>
+
 
         <div className="flex flex-col items-center py-12 bg-white w-full">
           {/* Desktop View - Grid layout for 4 cards in a row */}
@@ -84,50 +86,34 @@ const MiddleMain = () => {
             ))}
           </div>
 
-          {/* Mobile View - Slider layout */}
-          <div className="relative w-full md:hidden">
-            {/* Single Slide */}
-            <div
-              className={`relative w-full h-96 rounded-2xl overflow-hidden shadow-lg ${features[currentIndex].bgColor}`}
-            >
-              {/* Background Image */}
-              <img
-                src={features[currentIndex].imageUrl}
-                alt={features[currentIndex].title}
-                className="w-full h-full object-cover"
-              />
+          {/* Mobile View - Swipeable Carousel layout */}
+          <div className="relative w-full md:hidden overflow-x-scroll flex space-x-4 px-6 snap-x snap-mandatory scrollbar-hide">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className={`relative min-w-[75%] h-96 rounded-2xl overflow-hidden shadow-lg snap-center ${feature.bgColor}`}
+                style={{
+                  marginLeft: index === 0 ? '15px' : '',
+                  marginRight: index === features.length - 1 ? '15px' : '',
+                }}
+              >
+                {/* Background Image */}
+                <img
+                  src={feature.imageUrl}
+                  alt={feature.title}
+                  className="w-full h-full object-cover"
+                />
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-              {/* Text Overlay */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10">
-                <h2 className="text-lg font-semibold">
-                  {features[currentIndex].title}
-                </h2>
-                <p className="text-xl font-medium">
-                  {features[currentIndex].description}
-                </p>
+                {/* Text Overlay */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10">
+                  <h2 className="text-lg font-semibold">{feature.title}</h2>
+                  <p className="text-xl font-medium">{feature.description}</p>
+                </div>
               </div>
-            </div>
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-between mt-4 w-full px-4">
-              <button
-                className="text-2xl bg-gray-800 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700"
-                onClick={handlePrev}
-                aria-label="Previous Feature"
-              >
-                ‹
-              </button>
-              <button
-                className="text-2xl bg-gray-800 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700"
-                onClick={handleNext}
-                aria-label="Next Feature"
-              >
-                ›
-              </button>
-            </div>
+            ))}
           </div>
         </div>
       </div>
