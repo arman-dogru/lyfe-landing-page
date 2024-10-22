@@ -9,26 +9,26 @@ import "../styles/middleMain.css";
 
 const features = [
   {
-    title: "Find Events",
-    description: "Meet like-minded people with similar interests.",
+    title: "Hangout Together",
+    description: "Create, share, or jump into spontaneous hangouts with friends or new people for fun moments.",
     imageUrl: Event1,
     bgColor: "bg-black",
   },
   {
-    title: "Build Community",
-    description: "Connect with new people in your area.",
+    title: "Exclusive Communities & Events",
+    description: "Join or create communities or events that celebrate your passions, on or off campus. ",
     imageUrl: Event4,
     bgColor: "bg-black",
   },
   {
-    title: "Meet People",
-    description: "Make long lasting friendships.",
+    title: "Engage with Friends",
+    description: "Connect, share, and spark new challenges with your friends.",
     imageUrl: Event3,
     bgColor: "bg-black",
   },
   {
-    title: "Enjoy Lyfe",
-    description: "Experience the excitement of Lyfe together.",
+    title: "Share Moments",
+    description: "Create or watch videos that reflects your student life, interests, and experiences.",
     imageUrl: Arman,
     bgColor: "bg-black",
   },

@@ -7,11 +7,11 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const TopMain = () => {
   const texts = [
-    "Empowering artists around the globe",
-    "Supporting independent creators",
-    "A platform built for small artists",
-    "Helping creative minds thrive",
-    "Connecting the world through art",
+    "A platform where local meets global.",
+    "A space bringing uOttawa, Carleton, and Algonquin students closer to connect, discover new things, and thrive!",
+    "Explore your world, share moments, and build communities that matter.",
+    "Spark conversations with friends and people near you based on your interests.",
+    "Discover, share, and live your best moments with those closest to you.",
   ];
 
   const [currentText, setCurrentText] = useState(0);
