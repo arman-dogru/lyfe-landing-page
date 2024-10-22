@@ -54,20 +54,22 @@ const HeroTop = () => {
 
         {/* Join Waitlist Button */}
         <div className="flex mt-12">
-          <button className="relative border border-black rounded-full px-8 sm:px-12 md:px-16 lg:px-20 py-3 text-base flex items-center justify-center space-x-2 hover:bg-black hover:text-white transition-all duration-300 md:text-lg">
-            <span>Get Early Access</span>
-            <svg
-              className="w-5 h-5 md:w-6 md:h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <a href="https://forms.fillout.com/t/2HnnrSfJU9us" target="_blank" rel="noopener noreferrer">
+            <button className="relative border border-black rounded-full px-8 sm:px-12 md:px-16 lg:px-20 py-3 text-base flex items-center justify-center space-x-2 hover:bg-black hover:text-white transition-all duration-300 md:text-lg">
+              <span>Get Early Access</span>
+              <svg
+                className="w-5 h-5 md:w-6 md:h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </a>
         </div>
 
         {/* Decorative Arrow at Bottom */}

@@ -15,6 +15,7 @@ const BottomMain = () => {
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-16 xl:space-x-32 mt-16 px-4">
         {/* Join Waitlist Button */}
+        <a href="https://forms.fillout.com/t/2HnnrSfJU9us" target="_blank" rel="noopener noreferrer">
         <button className="relative border border-black rounded-full px-6 py-3 text-base md:text-lg lg:text-xl flex items-center justify-between space-x-2 hover:bg-black hover:text-white transition-all duration-300 whitespace-nowrap">
           <span>Get Early Access</span>
           <svg
@@ -29,6 +30,7 @@ const BottomMain = () => {
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </button>
+        </a>
 
         {/* Middle Text */}
         <p className="text-center text-lg md:text-xl lg:text-2xl">
@@ -54,9 +56,11 @@ const BottomMain = () => {
           </div>
           <div className="flex items-center justify-center lg:justify-start space-x-2 bg-gray-200 px-4 py-2 rounded-md">
             <FaApple size={24} className="text-black" />
+            <a href="https://forms.fillout.com/t/2HnnrSfJU9us" target="_blank" rel="noopener noreferrer">
             <p className="text-sm md:text-base font-medium text-black">
               Join waitlist for <br /> iOS App
             </p>
+            </a>
           </div>
         </div>
 
