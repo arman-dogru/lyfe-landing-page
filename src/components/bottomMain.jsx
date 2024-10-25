@@ -16,20 +16,20 @@ const BottomMain = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-16 xl:space-x-32 mt-16 px-4">
         {/* Join Waitlist Button */}
         <a href="https://forms.fillout.com/t/2HnnrSfJU9us" target="_blank" rel="noopener noreferrer">
-        <button className="relative border border-black rounded-full px-6 py-3 text-base md:text-lg lg:text-xl flex items-center justify-between space-x-2 hover:bg-black hover:text-white transition-all duration-300 whitespace-nowrap">
-          <span>Get Early Access</span>
-          <svg
-            className="w-5 h-5 md:w-6 md:h-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
+          <button className="relative border border-black rounded-full px-6 py-3 text-base md:text-lg lg:text-xl flex items-center justify-between space-x-2 hover:bg-black hover:text-white transition-all duration-300 whitespace-nowrap">
+            <span>Get Early Access</span>
+            <svg
+              className="w-5 h-5 md:w-6 md:h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
         </a>
 
         {/* Middle Text */}
@@ -57,9 +57,9 @@ const BottomMain = () => {
           <div className="flex items-center justify-center lg:justify-start space-x-2 bg-gray-200 px-4 py-2 rounded-md">
             <FaApple size={24} className="text-black" />
             <a href="https://forms.fillout.com/t/2HnnrSfJU9us" target="_blank" rel="noopener noreferrer">
-            <p className="text-sm md:text-base font-medium text-black">
-              Join waitlist for <br /> iOS App
-            </p>
+              <p className="text-sm md:text-base font-medium text-black">
+                Join waitlist for <br /> iOS App
+              </p>
             </a>
           </div>
         </div>
@@ -72,10 +72,18 @@ const BottomMain = () => {
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:pt-20 w-full md:w-auto">
           <p className="mb-1 font-semibold">SOCIALS</p>
           <div className="flex space-x-4 mt-2">
-            <FaFacebook size={24} />
-            <FaInstagram size={24} />
-            <FaTiktok size={24} />
-            <FaXTwitter size={24} />
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <FaFacebook size={24} />
+            </a>
+            <a href="https://www.instagram.com/lyfe.social/profilecard/?igsh=b29tcnJ6ZDA5enNl" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={24} />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <FaTiktok size={24} />
+            </a>
+            <a href="https://x.com/LyfeisSocial" target="_blank" rel="noopener noreferrer">
+              <FaXTwitter size={24} />
+            </a>
           </div>
         </div>
 

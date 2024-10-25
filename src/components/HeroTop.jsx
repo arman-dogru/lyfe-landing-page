@@ -80,6 +80,8 @@ const HeroTop = () => {
           />
         </div>
       </div>
+      {/* random div for extra space */}
+      <div className="h-20"></div>
     </div>
   );
 };

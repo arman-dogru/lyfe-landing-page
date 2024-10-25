@@ -28,6 +28,18 @@ const TopMain = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const gridImages = [
+    Image1,
+    Image2,
+    Image3,
+    Image2,
+    Image3,
+    Image1,
+    Image3,
+    Image1,
+    Image2,
+  ]; // Adjusted to 9 images for a 3x3 grid
+
   return (
     <div
       id="top-main"
@@ -71,24 +83,70 @@ const TopMain = () => {
           </h1>
         </div>
 
-        <div className="relative mx-auto h-auto" id="Image-Flexing">
-          <ScrollAnimation animateIn="backInUp">
-            <div className="block md:relative mt-4 md:mt-0 -left-20 top-32 sm:top-24 z-0 w-52 sm:w-60 rounded-full overflow-hidden">
-              <img src={Image1} alt="Image 1" className="object-cover w-full h-full" />
+        {/* Image Container */}
+        <div className="relative mx-auto h-auto" id="Image-Container">
+          {/* Image Grid for Small Screens */}
+          <div className="block md:hidden w-full overflow-hidden" id="Image-Grid-Container">
+            <div className="flex animate-scroll gap-2" id="grid-wrapper">
+              {/* Original Grid */}
+              <div className="grid grid-cols-3 grid-rows-3 w-full h-full flex-shrink-0 gap-2" id="Image-Grid">
+                {gridImages.map((imgSrc, index) => (
+                  <div key={index} className="w-full h-full">
+                    <img
+                      src={imgSrc}
+                      alt={`Grid Image ${index}`}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                ))}
+              </div>
+              {/* Duplicated Grid */}
+              <div className="grid grid-cols-3 grid-rows-3 w-full h-full flex-shrink-0 gap-2" id="Image-Grid-Duplicate">
+                {gridImages.map((imgSrc, index) => (
+                  <div key={index} className="w-full h-full">
+                    <img
+                      src={imgSrc}
+                      alt={`Grid Image Duplicate ${index}`}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </ScrollAnimation>
+          </div>
 
-          <ScrollAnimation animateIn="backInRight">
-            <div className="block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-52 sm:w-60 rounded-full overflow-hidden">
-              <img src={Image2} alt="Image 2" className="object-cover w-full h-full" />
-            </div>
-          </ScrollAnimation>
+          {/* Animated Images for Medium and Larger Screens */}
+          <div className="relative mx-auto h-auto md:block" id="Image-Flexing">
+            <ScrollAnimation animateIn="backInUp">
+              <div className="hidden md:block md:relative mt-4 md:mt-0 -left-20 top-32 sm:top-24 z-0 w-52 sm:w-60 rounded-full overflow-hidden">
+                <img
+                  src={Image1}
+                  alt="Image 1"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </ScrollAnimation>
 
-          <ScrollAnimation animateIn="backInUp" offset={20}>
-            <div className="block md:relative mt-4 md:mt-0 -left-16 sm:-left-24 sm:-top-40 top-24 z-10 w-52 sm:w-60 rounded-full overflow-hidden">
-              <img src={Image3} alt="Image 3" className="object-cover w-full h-full" />
-            </div>
-          </ScrollAnimation>
+            <ScrollAnimation animateIn="backInRight">
+              <div className="hidden md:block md:relative mt-4 md:mt-0 left-36 top-0 z-20 w-52 sm:w-60 rounded-full overflow-hidden">
+                <img
+                  src={Image2}
+                  alt="Image 2"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animateIn="backInUp" offset={20}>
+              <div className="hidden md:block md:relative mt-4 md:mt-0 -left-16 sm:-left-24 sm:-top-40 top-24 z-10 w-52 sm:w-60 rounded-full overflow-hidden">
+                <img
+                  src={Image3}
+                  alt="Image 3"
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </ScrollAnimation>
+          </div>
         </div>
       </div>
     </div>

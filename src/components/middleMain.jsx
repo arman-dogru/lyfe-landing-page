@@ -16,7 +16,7 @@ const features = [
   },
   {
     title: "Exclusive Communities & Events",
-    description: "Join or create communities or events that celebrate your passions, on or off campus. ",
+    description: "Join or create communities or events that celebrate your passions, on or off campus.",
     imageUrl: Event4,
     bgColor: "bg-black",
   },
@@ -28,7 +28,7 @@ const features = [
   },
   {
     title: "Share Moments",
-    description: "Create or watch videos that reflects your student life, interests, and experiences.",
+    description: "Create or watch videos that reflect your student life, interests, and experiences.",
     imageUrl: Arman,
     bgColor: "bg-black",
   },
@@ -56,7 +56,6 @@ const MiddleMain = () => {
           Our Features
         </h1>
 
-
         <div className="flex flex-col items-center py-12 bg-white w-full">
           {/* Desktop View - Grid layout for 4 cards in a row */}
           <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
@@ -80,21 +79,22 @@ const MiddleMain = () => {
                   <div className="space-y-2">
                     <h2 className="text-sm font-medium">{feature.title}</h2>
                     <p className="text-2xl font-medium">{feature.description}</p>
-                    </div>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Mobile View - Swipeable Carousel layout */}
-          <div className="relative w-80 md:hidden overflow-x-scroll flex space-x-4 px-6 snap-x snap-mandatory scrollbar-hide">
+          <div className="relative w-full md:hidden overflow-x-scroll flex space-x-4 px-6 snap-x snap-mandatory scrollbar-hide">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`relative min-w-[75%] h-96 rounded-2xl overflow-hidden shadow-lg snap-center ${feature.bgColor}`}
+                className={`relative min-w-[75%] rounded-2xl overflow-hidden shadow-lg snap-center ${feature.bgColor}`}
                 style={{
                   marginLeft: index === 0 ? '1px' : '',
                   marginRight: index === features.length - 1 ? '1px' : '',
+                  height: 'calc(75vw * 1.7)', // Maintaining a 1:1.9 aspect ratio on mobile view
                 }}
               >
                 {/* Background Image */}
